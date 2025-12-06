@@ -1,29 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About - Learning Log</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">Learning Log</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-4">
+  <h2>About Learning Log</h2>
+  <p>
+    Learning Log is a Django web application that helps you track topics you’re studying
+    and record notes about them. Each topic belongs to a registered user, ensuring that
+    your data is private and owned by you.
+  </p>
+  <p>
+    Features include:
+  </p>
+  <ul>
+    <li>User accounts with login and registration</li>
+    <li>Ability to create topics and add entries</li>
+    <li>Ownership of data — only you can see your topics and entries</li>
+    <li>Responsive design using Bootstrap for compatibility across devices</li>
+  </ul>
+</div>
+{% endblock %}
 
-    <div class="container text-center mt-5">
-        <h1>About Learning Log</h1>
-        <p>This app helps you track your learning progress and organize your thoughts.</p>
-    </div>
-</body>
-</html>
